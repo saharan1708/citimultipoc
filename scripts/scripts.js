@@ -453,7 +453,21 @@ async function loadEager(doc) {
       maxYOffset: 0,
       minXOffset: 0,
       minYOffset: 0,
+    },  
+    _experienceplatform: {
+      identification:{
+        core:{
+          ecid: sessionStorage.getItem("com.adobe.reactor.dataElements.ECID")
+        }
+      }
     },
+    web: {
+      webPageDetails:{
+        name: document.title,
+        URL: window.location.href
+      }
+    }
+
   });
   if (pageType !== 'Product') {
     window.adobeDataLayer.push((dl) => {
